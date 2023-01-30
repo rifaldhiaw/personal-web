@@ -9,6 +9,9 @@ export function Layout({ children }: LayoutProps) {
     <>
       <SiteHeader />
       <main>{children}</main>
+      <footer className="py-10 text-center text-sm text-gray-500">
+        All rights reserved © Rifaldhi AW {new Date().getFullYear()}
+      </footer>
     </>
   )
 }
