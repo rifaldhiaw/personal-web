@@ -1,6 +1,6 @@
 import { Fragment } from "react"
 import Head from "next/head"
-import { LayoutDashboard, User, Video } from "lucide-react"
+import { Activity, LayoutDashboard, User, Video } from "lucide-react"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
@@ -50,6 +50,13 @@ const projects = [
     github: "https://github.com/rifaldhiaw/konekty",
     icon: Video,
   },
+  {
+    title: "Habit Tracker App",
+    description: "Simple habit tracker app built with Flutter",
+    url: "https://play.google.com/store/apps/details?id=com.aweydev.ezhabit&hl=id&gl=US",
+    github: "",
+    icon: Activity,
+  },
 ]
 
 export default function IndexPage() {
@@ -64,7 +71,7 @@ export default function IndexPage() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <section className="container my-40">
+      <section className="container my-44">
         <div className="flex flex-col items-center gap-4">
           <h1
             className={cn(
@@ -87,7 +94,7 @@ export default function IndexPage() {
           className={cn(
             "mx-auto",
             "max-w-[900px]",
-            "text-slate-500 shadow-sm dark:text-slate-400",
+            "text-slate-500 dark:text-slate-400",
             "flex flex-wrap justify-center"
           )}
         >
@@ -95,7 +102,6 @@ export default function IndexPage() {
             <Fragment key={tech}>
               <span
                 className={cn(
-                  "font-semibold",
                   "rounded-3xl hover:text-slate-900 dark:hover:text-slate-300",
                   "hover:shadow-md dark:hover:shadow-slate-700",
                   "px-4 py-1"
@@ -103,7 +109,7 @@ export default function IndexPage() {
               >
                 {tech}
               </span>
-              <span className="mx-2">{i < techs.length - 1 && "-"}</span>
+              <span className="mx-2">{i < techs.length - 1 && "."}</span>
             </Fragment>
           ))}
         </div>
