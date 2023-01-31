@@ -102,7 +102,7 @@ export default function IndexPage() {
             <Fragment key={tech}>
               <span
                 className={cn(
-                  "rounded-3xl px-4 py-1",
+                  "cursor-default rounded-3xl px-4 py-1",
                   "transition-all",
                   "hover:text-slate-900 dark:hover:text-slate-300",
                   "hover:shadow-lg dark:hover:shadow-slate-700",
