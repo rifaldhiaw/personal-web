@@ -102,9 +102,12 @@ export default function IndexPage() {
             <Fragment key={tech}>
               <span
                 className={cn(
-                  "rounded-3xl hover:text-slate-900 dark:hover:text-slate-300",
-                  "hover:shadow-md dark:hover:shadow-slate-700",
-                  "px-4 py-1"
+                  "rounded-3xl px-4 py-1",
+                  "transition-all",
+                  "hover:text-slate-900 dark:hover:text-slate-300",
+                  "hover:shadow-lg dark:hover:shadow-slate-700",
+                  "hover:bg-white dark:hover:bg-slate-900",
+                  "hover:font-semibold"
                 )}
               >
                 {tech}
@@ -116,7 +119,7 @@ export default function IndexPage() {
       </section>
 
       <section className={cn("container", "my-40", "text-center")}>
-        <h2 className="my-24 text-2xl font-bold">Projects</h2>
+        <h2 className="my-24 text-4xl font-bold">Projects</h2>
         <div className="flex flex-wrap justify-center gap-4">
           {projects.map((project) => (
             <div
