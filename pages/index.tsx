@@ -76,7 +76,7 @@ export default function IndexPage() {
           <h1
             className={cn(
               "font-extrabold leading-tight tracking-tighter",
-              "text-3xl sm:text-3xl md:text-5xl lg:text-7xl"
+              "text-3xl sm:text-3xl md:text-5xl lg:text-[120px]"
             )}
           >
             {siteConfig.name}
@@ -88,7 +88,7 @@ export default function IndexPage() {
       </section>
 
       <section
-        className={cn("p-8", "bg-slate-50 dark:bg-slate-800", "text-center")}
+        className={cn("p-8", "bg-slate-100 dark:bg-slate-800", "text-center")}
       >
         <div
           className={cn(
