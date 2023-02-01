@@ -104,6 +104,7 @@ export default function IndexPage() {
                 className={cn(
                   "cursor-default rounded-3xl px-4 py-1",
                   "transition-all",
+                  "text-xs md:text-base",
                   "hover:text-slate-900 dark:hover:text-slate-300",
                   "hover:shadow-lg dark:hover:shadow-slate-700",
                   "hover:bg-white dark:hover:bg-slate-900",
