@@ -1,4 +1,4 @@
-import { Fragment } from "react"
+import { Fragment, useEffect, useState } from "react"
 import Head from "next/head"
 import { Activity, LayoutDashboard, User, Video } from "lucide-react"
 
@@ -58,8 +58,32 @@ const projects = [
     icon: Activity,
   },
 ]
+const colors = [
+  "from-orange-400 to-red-500",
+  "from-purple-400 to-pink-500",
+  "from-blue-400 to-indigo-500",
+  "from-green-400 to-teal-500",
+  "from-yellow-400 to-amber-500",
+]
 
 export default function IndexPage() {
+  // awColor state
+  const [awColor, setAwColor] = useState(colors[0])
+
+  // every 2 seconds, change awColor state
+  useEffect(() => {
+    let currentColor = awColor[0]
+
+    const interval = setInterval(() => {
+      const nextIndex = colors.indexOf(currentColor) + 1
+      const nextColor = colors[nextIndex] || colors[0]
+      currentColor = nextColor
+      setAwColor(nextColor)
+    }, 1600)
+    return () => clearInterval(interval)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
   return (
     <Layout>
       <Head>
@@ -76,10 +100,19 @@ export default function IndexPage() {
           <h1
             className={cn(
               "font-extrabold leading-tight tracking-tighter",
-              "text-3xl sm:text-3xl md:text-5xl lg:text-[120px]"
+              "text-5xl sm:text-7xl md:text-8xl lg:text-[120px]"
             )}
           >
-            {siteConfig.name}
+            Rifaldhi{" "}
+            <span
+              className={cn(
+                "font-black transition-all",
+                "bg-gradient-to-r bg-clip-text text-transparent",
+                awColor
+              )}
+            >
+              AW
+            </span>
           </h1>
           <p className="text-center text-lg text-slate-700 dark:text-slate-400 sm:text-xl">
             {siteConfig.description}
