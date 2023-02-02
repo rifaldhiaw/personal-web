@@ -94,7 +94,6 @@ export default function IndexPage() {
           className={cn(
             "mx-auto",
             "max-w-[900px]",
-            "text-slate-500 dark:text-slate-400",
             "flex flex-wrap justify-center"
           )}
         >
@@ -105,6 +104,7 @@ export default function IndexPage() {
                   "cursor-default rounded-3xl px-4 py-1",
                   "transition-all",
                   "text-xs md:text-base",
+                  "text-slate-600 dark:text-slate-400",
                   "hover:text-slate-900 dark:hover:text-slate-300",
                   "hover:shadow-lg dark:hover:shadow-slate-700",
                   "hover:bg-white dark:hover:bg-slate-900",
