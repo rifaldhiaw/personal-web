@@ -9,7 +9,7 @@ import { Layout } from "@/components/layout"
 const techs = [
   "Next.js",
   "React.js",
-  "Svelte",
+  "SvelteKit",
   "React Native",
   "Flutter",
   "Tailwind CSS",
